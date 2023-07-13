@@ -63,7 +63,7 @@ export class Waypoint {
   }
 }
 
-class Param {
+export class Param {
   p_init: Waypoint;
   seg_final: [number, number, number];
   turn_radius: number;
@@ -78,16 +78,6 @@ class Param {
     this.seg_final = seg_final;
     this.turn_radius = turn_radius;
     this.type = 0;
-  }
-}
-
-class Trajectory {
-  x: number[];
-  y: number[];
-
-  constructor(x: number[], y: number[]) {
-    this.x = x;
-    this.y = y;
   }
 }
 

@@ -3,6 +3,6 @@ import {
   dubinsPath,
   dubinsSegment,
   dubinsTraj,
-} from "./dubinspath";
+} from "./dubinsPath";
 
 export { calcDubinsPath, dubinsTraj, dubinsPath, dubinsSegment };

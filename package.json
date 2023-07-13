@@ -2,9 +2,13 @@
   "name": "dubins-path",
   "version": "1.0.0",
   "description": "Calculate Dubins Path between two points with directions",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "build:dev": "webpack --mode development",
+    "build:prod": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -20,5 +24,17 @@
   "bugs": {
     "url": "https://github.com/toplevelview/dubins-path/issues"
   },
-  "homepage": "https://github.com/toplevelview/dubins-path#readme"
+  "homepage": "https://github.com/toplevelview/dubins-path#readme",
+  "devDependencies": {
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ]
 }
