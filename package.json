@@ -1,6 +1,6 @@
 {
   "name": "dubins-path",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Calculate Dubins Path between two points with directions",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

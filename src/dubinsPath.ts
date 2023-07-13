@@ -27,6 +27,25 @@ class TurnType {
     }
   }
 
+  static fromNumberToTurnString(n: TurnType) {
+    switch (n) {
+      case 1:
+        return "LSL";
+      case 2:
+        return "LSR";
+      case 3:
+        return "RSL";
+      case 4:
+        return "RSR";
+      case 5:
+        return "RLR";
+      case 6:
+        return "LRL";
+      default:
+        return "LSL";
+    }
+  }
+
   static fromTurnTypeToNumber(t: TurnType) {
     switch (t) {
       case TurnType.LSL:
@@ -520,3 +539,22 @@ export function dubinsSegment(
 const pythonModulo = (n: number, m: number) => {
   return ((n % m) + m) % m;
 };
+
+export function calculateDubinsSegments(
+  param: Param
+): Array<{ type: "L" | "S" | "R"; length: number }> {
+  let segments: Array<{ type: "L" | "S" | "R"; length: number }> = [];
+
+  for (let i = 0; i < 3; i++) {
+    let segmentLength = param.seg_final[i] * param.turn_radius;
+
+    const turnType = TurnType.fromNumberToTurnString(param.type);
+
+    segments.push({
+      type: turnType[i] as "L" | "S" | "R",
+      length: segmentLength,
+    });
+  }
+
+  return segments;
+}
