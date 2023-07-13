@@ -441,7 +441,7 @@ export function dubinsTraj(param: Param, step: number): number[][] {
   return path;
 }
 
-function dubinsPath(param: Param, t: number): number[] {
+export function dubinsPath(param: Param, t: number): number[] {
   // Helper function for curve generation
   let tprime: number = t / param.turn_radius;
   let p_init: number[] = [
@@ -496,7 +496,7 @@ function dubinsPath(param: Param, t: number): number[] {
   }
 }
 
-function dubinsSegment(
+export function dubinsSegment(
   seg_param: number,
   seg_init: number[],
   seg_type: number

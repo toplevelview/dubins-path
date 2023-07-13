@@ -1,0 +1,24 @@
+{
+  "name": "dubins-path",
+  "version": "1.0.0",
+  "description": "Calculate Dubins Path between two points with directions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toplevelview/dubins-path.git"
+  },
+  "keywords": [
+    "dubins",
+    "constrained-path",
+    "path-calculation"
+  ],
+  "author": "gsingh7",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toplevelview/dubins-path/issues"
+  },
+  "homepage": "https://github.com/toplevelview/dubins-path#readme"
+}
